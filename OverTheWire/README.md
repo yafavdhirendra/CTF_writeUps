@@ -36,12 +36,23 @@ The wargames cover topics such as:
 
 | Level   | Topic                | Write-up                       |
 | ------- | -------------------- | ------------------------------ |
-| 00 → 01 | SSH / Basic commands | [Write-up](./Bandit/Level-00/) |
-| 01 → 02 | File handling        | [Write-up](./Bandit/Level-01/) |
-| 02 → 03 | Special characters   | [Write-up](./Bandit/Level-02/) |
+| 00 → 01 | SSH / Basic commands | [Write-up](./Bandit/Level_00/README.md) |
+| 01 → 02 | File handling        | [Write-up](./Bandit/Level_01/README.md) |
+| 02 → 03 | Special characters   | [Write-up](./Bandit/Level_02/README.md) |
+| 03 → 04 | Hidden File          | [Write-up](./Bandit/Level_03/README.md) |
+| 04 → 05 | Human_Readable File Discovery | [Write-up](./Bandit/Level_04/README.md) |
+| 05 → 06 | Finding Files by size and permission | [Write-up](./Bandit/Level_05/README.md) |
+| 06 → 07 | Finding Files by Owner, Group | [Write-up](./Bandit/Level_06/README.md) |
+| 07 → 08 | Keyword Search with Grep   | [Write-up](./Bandit/Level_07/README.md) |
+| 08 → 09 | Unique Line Detection         | [Write-up](./Bandit/Level_08/README.md) |
+| 09 → 10 | Pattern Matching in Binary Data | [Write-up](./Bandit/Level_09/README.md) |
+| 10 → 11 | Base64 Decoding        | [Write-up](./Bandit/Level_10/README.md) |
+| 02 → 03 | Special characters   | [Write-up](./Bandit/Level_02/README.md) |
+| 03 → 04 | Hidden File          | [Write-up](./Bandit/Level_03/README.md) |
 | ...     | ...                  | ...                            |
 
-> More levels will be added as I progress through the game.
+
+
 
 ---
 
