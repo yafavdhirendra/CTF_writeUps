@@ -52,6 +52,11 @@ The wargames cover topics such as:
 | 13 → 14 | SSH Private Key auth                 | [Write-up](./Bandit/Level_13/README.md) |
 | 14 → 15 | TCP service with Netcat              | [Write-up](./Bandit/Level_14/README.md) |
 | 15 → 16 | SSL/TLS connection with Openssl      | [Write-up](./Bandit/Level_15/README.md) |
+| 16 → 17 | SSL/TLS Port Scanning                | [Write-up](./Bandit/Level_16/README.md) |
+| 17 → 18 | Comparing Files                      | [Write-up](./Bandit/Level_17/README.md) |
+| 18 → 19 | Restricted SSH Shell                 | [Write-up](./Bandit/Level_18/README.md) |
+| 19 → 20 | Set-UID & Privilege Escalation       | [Write-up](./Bandit/Level_19/README.md) |
+| 20 → 21 | Set-UID & TCP Connection             | [Write-up](./Bandit/Level_20/README.md) |
 | 10 → 11 | Base64 Decoding                      | [Write-up](./Bandit/Level_10/README.md) |
 | 02 → 03 | Special characters                   | [Write-up](./Bandit/Level_02/README.md) |
 | 03 → 04 | Hidden File                          | [Write-up](./Bandit/Level_03/README.md) |
