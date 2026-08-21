@@ -4,12 +4,12 @@ A collection of my **OverTheWire CTF write-ups, notes, commands, techniques, and
 
 The purpose of this repository is to document my learning while solving OverTheWire wargames and to keep useful Linux, networking, web, cryptography, and security techniques in one place.
 
-> ⚠️ **Spoiler Warning:**
+>  **Spoiler Warning:**
 > This repository contains solutions and walkthroughs for OverTheWire challenges. If you are currently solving a challenge yourself, try solving it before reading the write-up.
 
 ---
 
-## 🎯 About OverTheWire
+##  About OverTheWire
 
 [OverTheWire](https://overthewire.org/) provides several wargames designed to help people learn and practice cybersecurity concepts.
 
@@ -28,7 +28,7 @@ The wargames cover topics such as:
 
 ---
 
-## 🏴 Wargames
+##  Wargames
 
 ### Bandit
 
@@ -57,9 +57,9 @@ The wargames cover topics such as:
 | 18 → 19 | Restricted SSH Shell                 | [Write-up](./Bandit/Level_18/README.md) |
 | 19 → 20 | Set-UID & Privilege Escalation       | [Write-up](./Bandit/Level_19/README.md) |
 | 20 → 21 | Set-UID & TCP Connection             | [Write-up](./Bandit/Level_20/README.md) |
-| 10 → 11 | Base64 Decoding                      | [Write-up](./Bandit/Level_10/README.md) |
-| 02 → 03 | Special characters                   | [Write-up](./Bandit/Level_02/README.md) |
-| 03 → 04 | Hidden File                          | [Write-up](./Bandit/Level_03/README.md) |
+| 21 → 22 | Cron Jobs & Automated Scripts        | [Write-up](./Bandit/Level_21/README.md) |
+| 22 → 23 | Cron Jobs & MD5 Hashing              | [Write-up](./Bandit/Level_22/README.md) |
+| 23 → 24 | Hidden File                          | [Write-up](./Bandit/Level_23/README.md) |
 | ...     | ...                    | ...                            |
 
 
@@ -90,28 +90,28 @@ The wargames cover topics such as:
 
 ---
 
-## 🧠 Topics Covered
+##  Topics Covered
 
 Throughout these wargames, I am documenting techniques related to:
 
-* 🐧 Linux
-* 🔐 SSH
-* 📁 File permissions
-* 🔎 Enumeration
-* 🌐 Networking
-* 🕸️ Web security
-* 🔑 Authentication
-* 🔢 Encoding & decoding
-* 🔐 Cryptography
-* 🐚 Shell scripting
-* ⚙️ Privilege escalation
-* 💻 Binary exploitation
-* 🧩 Reverse engineering
-* 🐍 Python scripting
+*  Linux
+*  SSH
+*  File permissions
+*  Enumeration
+*  Networking
+*  Web security
+*  Authentication
+*  Encoding & decoding
+*  Cryptography
+*  Shell scripting
+*  Privilege escalation
+*  Binary exploitation
+*  Reverse engineering
+*  Python scripting
 
 ---
 
-## 🛠️ Tools & Commands
+## Tools & Commands
 
 Some commonly used tools and commands include:
 
@@ -138,48 +138,21 @@ xxd
 
 ---
 
-## 📚 Write-up Format
 
-Each challenge write-up generally contains:
-
-1. **Challenge / Level**
-2. **Objective**
-3. **Initial Enumeration**
-4. **Commands Used**
-5. **What Happened**
-6. **Vulnerability / Concept**
-7. **Solution**
-8. **Important Takeaways**
-
-Example:
-
-```text
-Level-XX/
-├── README.md
-├── commands.txt
-└── files/
-```
-
----
-
-## 📈 Progress
+##  Progress
 
 | Wargame   |       Progress |
 | --------- | -------------: |
-| Bandit    | 🚧 In Progress |
-| Natas     |  ⏳ Not Started |
-| Leviathan |  ⏳ Not Started |
-| Krypton   |  ⏳ Not Started |
-| Narnia    |  ⏳ Not Started |
-| Behemoth  |  ⏳ Not Started |
-| Utumno    |  ⏳ Not Started |
-| Maze      |  ⏳ Not Started |
+| Bandit    |  In Progress   |
+| Natas     |   Not Started  |
+| Leviathan |   Not Started  |
+
 
 I will update this table as I progress.
 
 ---
 
-## ⚠️ Disclaimer
+##  Disclaimer
 
 These write-ups are created for **educational purposes** and to document my own learning.
 
@@ -187,7 +160,7 @@ If you are working through OverTheWire yourself, I recommend attempting each lev
 
 ---
 
-## 🔗 Resources
+##  Resources
 
 * [OverTheWire](https://overthewire.org/)
 * [OverTheWire Wargames](https://overthewire.org/wargames/)
@@ -196,7 +169,7 @@ If you are working through OverTheWire yourself, I recommend attempting each lev
 
 ---
 
-## 👨‍💻 Goal
+##  Goal
 
 > The goal of this repository is not simply to collect flags.
 
