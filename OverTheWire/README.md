@@ -60,6 +60,7 @@ The wargames cover topics such as:
 | 21 → 22 | Cron Jobs & Automated Scripts        | [Write-up](./Bandit/Level_21/README.md) |
 | 22 → 23 | Cron Jobs & MD5 Hashing              | [Write-up](./Bandit/Level_22/README.md) |
 | 23 → 24 | Hidden File                          | [Write-up](./Bandit/Level_23/README.md) |
+| 24 → 25 | Brute force with TCP connection      | [Write-up](./Bandit/Level_24/README.md) |
 | ...     | ...                    | ...                            |
 
 

