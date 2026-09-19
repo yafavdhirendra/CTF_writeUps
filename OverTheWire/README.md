@@ -61,6 +61,8 @@ The wargames cover topics such as:
 | 22 → 23 | Cron Jobs & MD5 Hashing              | [Write-up](./Bandit/Level_22/README.md) |
 | 23 → 24 | Hidden File                          | [Write-up](./Bandit/Level_23/README.md) |
 | 24 → 25 | Brute force with TCP connection      | [Write-up](./Bandit/Level_24/README.md) |
+| 25 → 26 | Restricted login shells/pagers       | [Write-up](./Bandit/Level_25/README.md) |
+| 26 → 27 | SUID privilege behavior              | [Write-up](./Bandit/Level_26/README.md) |
 | ...     | ...                    | ...                            |
 
 
