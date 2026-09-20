@@ -63,7 +63,10 @@ The wargames cover topics such as:
 | 24 → 25 | Brute force with TCP connection      | [Write-up](./Bandit/Level_24/README.md) |
 | 25 → 26 | Restricted login shells/pagers       | [Write-up](./Bandit/Level_25/README.md) |
 | 26 → 27 | SUID privilege behavior              | [Write-up](./Bandit/Level_26/README.md) |
-| ...     | ...                    | ...                            |
+| 27 → 28 | Git clone over SSH                   | [Write-up](./Bandit/Level_27/README.md) |
+| 28 → 29 | Git History                          | [Write-up](./Bandit/Level_28/README.md) |
+| 29 → 30 | Git branch                           | [Write-up](./Bandit/Level_29/README.md) |
+| ...     | ...                                  | ...                            |
 
 
 
