@@ -66,6 +66,9 @@ The wargames cover topics such as:
 | 27 → 28 | Git clone over SSH                   | [Write-up](./Bandit/Level_27/README.md) |
 | 28 → 29 | Git History                          | [Write-up](./Bandit/Level_28/README.md) |
 | 29 → 30 | Git branch                           | [Write-up](./Bandit/Level_29/README.md) |
+| 30 → 31 | Git tag                              | [Write-up](./Bandit/Level_30/README.md) |
+| 31 → 32 | Git push                             | [Write-up](./Bandit/Level_31/README.md) |
+| 32 → 33 | Escape from uppercase shell          | [Write-up](./Bandit/Level_32/README.md) |
 | ...     | ...                                  | ...                            |
 
 
